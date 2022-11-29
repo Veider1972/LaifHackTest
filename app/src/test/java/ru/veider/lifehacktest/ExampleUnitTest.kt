@@ -1,4 +1,4 @@
-package ru.veider.laifhacktest
+package ru.veider.lifehacktest
 
 import org.junit.Test
 

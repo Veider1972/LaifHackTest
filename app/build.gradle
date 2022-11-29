@@ -1,14 +1,17 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
 }
 
 android {
-    namespace 'ru.veider.laifhacktest'
+    namespace 'ru.veider.lifehacktest'
     compileSdk 33
 
     defaultConfig {
-        applicationId "ru.veider.laifhacktest"
+        applicationId "ru.veider.lifehacktest"
         minSdk 24
         targetSdk 33
         versionCode 1
@@ -37,7 +40,8 @@ android {
         compose true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion '1.1.1'
+        kotlinCompilerExtensionVersion compose_ui_version
+        kotlinCompilerVersion '1.5.10'
     }
     packagingOptions {
         resources {
@@ -55,11 +59,22 @@ dependencies {
     implementation "androidx.compose.ui:ui-tooling-preview:$compose_ui_version"
     implementation 'androidx.compose.material:material:1.3.1'
     implementation 'androidx.navigation:navigation-compose:2.5.3'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1'
+    implementation "androidx.compose.runtime:runtime-livedata:$compose_ui_version"
 
     // Accompanist
     implementation "com.google.accompanist:accompanist-pager:0.14.0" // Pager
     implementation "com.google.accompanist:accompanist-pager-indicators:0.14.0" // Pager Indicators
     implementation 'com.google.accompanist:accompanist-permissions:0.27.0'
+
+    // GSON
+    implementation 'com.google.code.gson:gson:2.9.0'
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.3'
+    //Coil
+    implementation "io.coil-kt:coil-compose:1.3.2"
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'

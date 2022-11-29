@@ -1,4 +1,4 @@
-package ru.veider.laifhacktest.ui.theme
+package ru.veider.lifehacktest.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle

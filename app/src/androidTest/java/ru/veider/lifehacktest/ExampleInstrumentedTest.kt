@@ -1,4 +1,4 @@
-package ru.veider.laifhacktest
+package ru.veider.lifehacktest
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

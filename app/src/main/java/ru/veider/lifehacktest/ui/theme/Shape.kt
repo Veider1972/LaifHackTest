@@ -1,4 +1,4 @@
-package ru.veider.laifhacktest.ui.theme
+package ru.veider.lifehacktest.ui.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes
